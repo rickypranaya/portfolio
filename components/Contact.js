@@ -2,13 +2,13 @@ import React from 'react'
 
 function Contact(props) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-dark-darkest">
+    <div className="flex min-h-screen items-center justify-center bg-dark-darkest px-6 md:px-12 xl:px-0">
       <div className="w-full max-w-2xl ">
         <div className="flex flex-col items-center justify-center">
-          <div className="mb-8 text-5xl font-medium text-primary">
+          <div className="mb-8 text-3xl sm:text-5xl font-medium text-primary">
             Get In Touch
           </div>
-          <div className="text-center  text-gray-400">
+          <div className="text-center text-sm sm:text-base text-gray-400">
             I’m currently searching for a new career opportunity as a Software
             Engineer with my background in Web and Mobile development. For a
             greater understanding of my professional qualifications, you can
@@ -29,7 +29,7 @@ function Contact(props) {
 
           <a
             href="mailto:rpranaya.2000@gmail.com"
-            className="mt-12 rounded border border-primary px-5 py-3 text-primary duration-200 hover:bg-primary hover:bg-opacity-10"
+            className="mt-12 rounded border border-primary px-5 py-1 sm:py-3 text-primary duration-200 hover:bg-primary hover:bg-opacity-10"
           >
             Reach Me
           </a>

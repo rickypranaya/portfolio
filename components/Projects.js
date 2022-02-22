@@ -48,8 +48,14 @@ const projects = [
     type: 'IOS and Android App',
     name: 'Bike Sharing App',
     description:
-      "Leading a team of 5 on a Final Year Project to create a Bike Sharing mobile and web app using Agile Development.",
-    tech: ['React Native', 'Node.js', 'Stripe', 'Goocle Cloud Platform', 'Twillio'],
+      'Leading a team of 5 on a Final Year Project to create a Bike Sharing mobile and web app using Agile Development.',
+    tech: [
+      'React Native',
+      'Node.js',
+      'Stripe',
+      'Goocle Cloud Platform',
+      'Twillio',
+    ],
     mobile: 'sinbike/sinbike.mp4',
   },
 ]
@@ -57,11 +63,11 @@ const projects = [
 const Header = () => {
   return (
     <div className="mb-12 flex items-center">
-      <div className="text-2xl">
+      <div className="text-xl sm:text-2xl">
         <span className="text-primary">03.</span>{' '}
         <span className="font-semibold text-white">Projects I've Built</span>
       </div>
-      <div className="mx-5 h-0 w-1/2 border-b border-dark-base" />
+      <div className="mx-5 hidden h-0 w-1/2 border-b border-dark-base md:block" />
     </div>
   )
 }
@@ -70,13 +76,19 @@ const Section = ({ item, align }) => {
   return (
     <div
       className={classNames(
-        'relative flex',
+        'relative md:flex',
         align == 'left' ? 'justify-end' : 'justify-start'
       )}
     >
+      <div className="block text-sm font-medium text-primary md:hidden">
+        {item.type}
+      </div>
+      <div className="mb-8 block text-xl font-semibold text-white md:hidden">
+        {item.name}
+      </div>
       {item.preview && (
         <div
-          className="h-[30vw] max-h-96 w-3/5 rounded bg-dark-darker shadow"
+          className="h-[55vw] w-full rounded bg-dark-darker shadow md:h-[30vw] md:max-h-96 md:w-3/5"
           style={{
             backgroundImage: `url('${item.preview}')`,
             backgroundPosition: 'top',
@@ -89,8 +101,8 @@ const Section = ({ item, align }) => {
       {item.mobile && (
         <div
           className={classNames(
-            'mx-32',
-            item.name == 'Property App' ? 'w-52' : 'w-48'
+            'md:mx-32',
+            item.name == 'Property App' ? 'w-64 md:w-52' : 'w-60 md:w-48'
           )}
         >
           <video className="VideoTag" autoPlay loop muted>
@@ -101,25 +113,29 @@ const Section = ({ item, align }) => {
 
       <div
         className={classNames(
-          'absolute right-0 top-1/2 flex w-full -translate-y-1/2 flex-col ',
-          align == 'left' ? 'items-start' : 'items-end'
+          'right-0 top-1/2  flex w-full flex-col md:absolute md:-translate-y-1/2 ',
+          align == 'left' ? 'md:items-start' : 'md:items-end'
         )}
       >
-        <div className="text-sm font-medium text-primary">{item.type}</div>
-        <div className="mb-8 text-2xl font-semibold text-white">
+        <div className="hidden text-sm font-medium text-primary md:block">
+          {item.type}
+        </div>
+        <div className="mb-8 hidden text-2xl font-semibold text-white md:block">
           {item.name}
         </div>
         <div
           className={classNames(
-            'w-[43%] rounded  bg-dark-darker bg-opacity-80 px-8 py-4 text-sm text-gray-300 shadow-xl backdrop-blur',
-            align == 'left' ? 'text-left' : 'text-right'
+            'rounded py-4  text-sm text-gray-300 backdrop-blur md:w-[60%] md:bg-dark-darker md:bg-opacity-70 md:px-8 md:shadow-xl lg:w-[43%]',
+            align == 'left' ? 'md:text-left' : 'md:text-right'
           )}
         >
           {item.description}
         </div>
-        <div className="my-6 flex space-x-5 text-sm text-gray-400">
+        <div className="flex flex-wrap space-x-4 text-sm text-gray-400 md:my-4">
           {item.tech.map((i) => (
-            <span key={i}>{i}</span>
+            <span className="py-2" key={i}>
+              {i}
+            </span>
           ))}
         </div>
         {item.url && (
@@ -127,7 +143,7 @@ const Section = ({ item, align }) => {
             href={item.url}
             target="_blank"
             rel="noreferrer noopener"
-            className="cursor-pointer rounded border border-primary px-4 py-1 text-sm text-primary duration-200 hover:bg-primary hover:bg-opacity-10"
+            className="mt-4 w-fit cursor-pointer rounded border border-primary px-4 py-1 text-sm text-primary duration-200 hover:bg-primary hover:bg-opacity-10 md:mt-0"
           >
             Visit Website
           </a>
@@ -139,8 +155,8 @@ const Section = ({ item, align }) => {
 
 function Projects(props) {
   return (
-    <div className="flex h-full py-32 items-center justify-center bg-dark-darkest">
-      <div className="w-[80vw] max-w-5xl">
+    <div className="flex h-full items-center justify-center bg-dark-darkest py-32  px-6 md:px-12 xl:px-0">
+      <div className="max-w-5xl md:w-[80vw]">
         <Header />
         <div className="space-y-32">
           {projects.map((item, index) => {

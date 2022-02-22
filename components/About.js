@@ -37,12 +37,12 @@ const skillset = [
 
 const Header = () => {
   return (
-    <div className="mb-8 flex items-center">
-      <div className="text-2xl">
+    <div className="mb-5 flex items-center sm:mb-8">
+      <div className="text-xl sm:text-2xl">
         <span className="text-primary">01.</span>{' '}
         <span className="font-semibold text-white">About Me</span>
       </div>
-      <div className="mx-5 h-0 w-2/5 border-b border-dark-base" />
+      <div className="mx-5 hidden h-0 w-2/5 border-b border-dark-base sm:block" />
     </div>
   )
 }
@@ -68,40 +68,39 @@ const Skill = ({ item }) => {
 
 function About(props) {
   return (
-    <div className="flex min-h-screen py-32 items-center justify-center bg-dark-darkest">
-      <div className="w-full max-w-4xl ">
-        <div className="flex">
-          <div className="w-3/5 space-y-5 pr-8 text-gray-400">
+    <div className="flex min-h-screen items-center justify-center bg-dark-darkest py-32  px-6 md:px-12 xl:px-0">
+      <div className="w-full max-w-md md:max-w-xl xl:max-w-4xl  ">
+        <div className="flex flex-col xl:flex-row">
+          <div className="space-y-5 text-gray-400 xl:w-3/5 xl:pr-8">
             <Header />
 
             <p>
-              It's all started 3 years ago when I had these many ideas of
-              creating apps that could give impacts to the community. Hence with
-              my basic HTML, CSS and vanilla javascript knowledge I started to
-              learn my first Mobile Development framework which was Flutter
-              (dart language).
+              It's started 3 years ago when I had these many ideas of apps that
+              could perhaps give an impact on the community. To see those ideas
+              coming into creation, with my basic HTML, CSS and vanilla
+              javascript knowledge I started to learn my first Mobile
+              Development framework which was Flutter (dart language).
             </p>
             <p>
               Fast-forward to today, I've created quite a handful of softwares
-              from Web app and Mobile app to Desktop app and had the privillege
-              to lead number of projects from Final Year Project to team of
+              from Web app and Mobile app to Desktop app and had the privilege
+              to lead a number of projects from Final Year Project to team of
               developers in a Startup.
             </p>
             <p>
               My main focus these days is to always keep up with the latest
-              technology and improving my skills individually as well as with
-              the teams.
+              technology and improve my skills individually as well as on teams.
             </p>
           </div>
-          <div className="flex  w-2/5 items-center pl-12 ">
+          <div className="mt-20 mb-12 flex items-center justify-center xl:mb-0  xl:mt-0 xl:w-2/5 xl:pl-12 ">
             <Feeds />
           </div>
         </div>
-        <div className="mt-8">
-          <div className="mb-4 text-xl font-medium text-white">
+        <div className=" mt-12 xl:mt-8">
+          <div className="mb-4 font-medium  text-white md:text-xl">
             Technologies I’ve been working with recently:
           </div>
-          <div className="grid w-full grid-cols-5">
+          <div className="grid w-full grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
             {skillset.map((item) => (
               <Skill item={item} key={item.name} />
             ))}

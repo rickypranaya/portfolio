@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import classNames from 'classnames'
 const Header = () => {
   return (
-    <div className="mb-8 flex items-center">
-      <div className="text-2xl">
+    <div className="mb-5 flex items-center sm:mb-8">
+      <div className="text-xl sm:text-2xl ">
         <span className="text-primary">02.</span>{' '}
         <span className="font-semibold text-white">Where I've Worked</span>
       </div>
-      <div className="mx-5 h-0 w-1/2 border-b border-dark-base" />
+      <div className="mx-5 hidden h-0 md:w-1/2 w-1/3 border-b border-dark-base sm:block" />
     </div>
   )
 }
@@ -25,7 +25,7 @@ function Experience(props) {
           setActiveTab(name)
         }}
         className={classNames(
-          'min-w-fit cursor-pointer px-6 py-3 text-sm font-medium  duration-200  hover:bg-opacity-10 hover:text-primary',
+          'flex w-full min-w-fit cursor-pointer justify-center px-6 py-3 text-sm font-medium duration-200  hover:bg-opacity-10  hover:text-primary md:justify-start',
           active ? ' text-primary' : 'text-gray-400 hover:bg-primary'
         )}
       >
@@ -49,7 +49,7 @@ function Experience(props) {
 
   const DisplayMantheos = () => {
     return (
-      <div className={classNames('w-full pl-6')}>
+      <div className={classNames('w-full sm:pl-6')}>
         <div className="text-xl font-medium text-white">Software Engineer</div>
         <div className="mb-6 text-sm text-gray-400">
           Jan 2022 - Feb 2022, Singapore
@@ -93,7 +93,7 @@ function Experience(props) {
 
   const Display11 = () => {
     return (
-      <div className="w-full pl-6">
+      <div className="w-full  sm:pl-6">
         <div className="text-xl font-medium text-white">
           FullStack Engineer Intern
         </div>
@@ -144,12 +144,12 @@ function Experience(props) {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-dark-darkest">
-      <div className="w-full max-w-2xl ">
+    <div className="flex min-h-screen items-center justify-center bg-dark-darkest px-6 md:px-12 xl:px-0">
+      <div className="w-full max-w-lg md:max-w-2xl ">
         <Header />
-        <div className="flex">
-          <div className="flex h-full min-w-fit">
-            <div className="h-ffit relative w-0.5 rounded bg-dark-darker">
+        <div className="md:flex">
+          <div className="h-full min-w-fit md:flex">
+            <div className="relative hidden w-0.5 rounded bg-dark-darker md:block">
               <div
                 className={classNames(
                   'absolute h-1/2 w-full rounded bg-primary duration-200',
@@ -157,12 +157,22 @@ function Experience(props) {
                 )}
               />
             </div>
-            <div>
+
+            <div className="flex w-full  md:block">
               <Button name="Mantheos" />
               <Button name="11.11 Technologies" />
             </div>
+
+            <div className="relative block h-0.5 rounded bg-dark-darker md:hidden">
+              <div
+                className={classNames(
+                  'absolute h-full w-1/2 rounded bg-primary duration-200',
+                  activeTab == 'Mantheos' ? 'translate-x-0' : 'translate-x-full'
+                )}
+              />
+            </div>
           </div>
-          <div className="relative">
+          <div className="relative mt-6 md:mt-0">
             <div
               className={classNames(
                 'absolute z-auto bg-dark-darkest duration-300',
