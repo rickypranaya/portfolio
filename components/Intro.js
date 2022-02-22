@@ -24,10 +24,10 @@ function About(props) {
               experience with modern designs.
             </div>
           </div>
-          <div className="relative sm:ml-4 mb-8 flex w-full items-center justify-center sm:mb-0 sm:w-1/4">
+          <div className="relative mb-8 flex w-full items-center justify-center sm:ml-4 sm:mb-0 sm:w-1/4">
             <img
               src="me.svg"
-              className="bg-gray-300 h-auto w-1/2 object-contain sm:w-full"
+              className="h-auto w-1/2 bg-gray-300 object-contain sm:w-full"
             />
 
             <div className="absolute -top-2 -right-2 h-full w-full border-primary lg:border-t-2 lg:border-r-2  xl:top-3 xl:h-4/5" />
@@ -37,7 +37,7 @@ function About(props) {
           onClick={goAbout}
           className="w-fit  cursor-pointer rounded border-2 border-primary px-6 py-3 text-sm font-medium text-primary duration-200 hover:bg-primary hover:bg-opacity-10"
         >
-          Check out more about me!
+          More about me!
         </div>
       </div>
     </div>

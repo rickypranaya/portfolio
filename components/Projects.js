@@ -53,7 +53,7 @@ const projects = [
       'React Native',
       'Node.js',
       'Stripe',
-      'Goocle Cloud Platform',
+      'Google Cloud Platform',
       'Twillio',
     ],
     mobile: 'sinbike/sinbike.mp4',
@@ -105,9 +105,19 @@ const Section = ({ item, align }) => {
             item.name == 'Property App' ? 'w-64 md:w-52' : 'w-60 md:w-48'
           )}
         >
-          <video className="VideoTag" autoPlay loop muted>
-            <source src={item.mobile} type="video/mp4" />
-          </video>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+        <video
+          loop
+          muted
+          autoplay
+          playsinline
+          src="${item.mobile}"
+        />,
+      `,
+            }}
+          ></div>
         </div>
       )}
 
