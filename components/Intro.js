@@ -26,8 +26,8 @@ function About(props) {
           </div>
           <div className="relative sm:ml-4 mb-8 flex w-full items-center justify-center sm:mb-0 sm:w-1/4">
             <img
-              src="me.png"
-              className="h-auto w-1/2 object-contain sm:w-full"
+              src="me.svg"
+              className="bg-gray-300 h-auto w-1/2 object-contain sm:w-full"
             />
 
             <div className="absolute -top-2 -right-2 h-full w-full border-primary lg:border-t-2 lg:border-r-2  xl:top-3 xl:h-4/5" />
