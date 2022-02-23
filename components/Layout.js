@@ -19,6 +19,6 @@ Layout.defaultProps = {
   title:
     'Ricky Pranaya | Fullstack developer - Web developer - Mobile developer',
   keywords:
-    'Fullstack developer portfolio, Web developer portfolio, Mobile developer portfolio',
+    'Ricky Pranaya, Fullstack developer portfolio, Web developer portfolio, Mobile developer portfolio',
   description: "Ricky Pranaya's portfolio",
 }
