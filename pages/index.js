@@ -34,8 +34,8 @@ const Home = () => {
   }
 
   return (
-    <div className=" h-full bg-gray-900">
-      <Headroom>
+    <div className="h-full bg-gray-900">
+      <Headroom disableInlineStyles>
         <Navbar
           goAbout={goAbout}
           goExp={goExp}

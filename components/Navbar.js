@@ -49,7 +49,7 @@ function Navbar(props) {
   ]
 
   return (
-    <div className="navbar  z-50  w-full  ">
+    <div className="navbar relative top-0 z-50  w-full  ">
       <div className="flex w-full  items-center justify-between bg-dark-darkest bg-opacity-80 py-4 pl-6  pr-4 backdrop-blur md:px-10">
         <Logo />
         <div className="flex items-center space-x-6">
@@ -113,6 +113,9 @@ function Navbar(props) {
       </div>
       {open && (
         <div
+          onScroll={() => {
+            setOpen(false)
+          }}
           onClick={() => {
             setOpen(false)
           }}
