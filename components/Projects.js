@@ -34,7 +34,7 @@ const projects = [
     name: 'Accounting Software',
     description:
       'An accounting desktop app for Mac and Windows. Features to create invoice, bill, financial statement and others needed for bookkeeping.',
-    tech: ['Electron.js', 'React.js', 'NeDB'],
+    tech: ['Electron.js', 'React.js', 'NeDB', 'MySQL'],
     preview: 'acc/preview.gif',
   },
   {
