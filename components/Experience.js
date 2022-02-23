@@ -135,9 +135,9 @@ function Experience(props) {
           >
             Rentperty
           </span>{' '}
-          for company's client using React Native, ExpressJS and MySQL. Designed
+          for the company's client using React Native, ExpressJS and MySQL. Designed
           features for nearby places using Google Maps API, WebSocket for
-          realtime chat and OCBC PayNow Api.
+          real time chat and OCBC PayNow Api.
         </Item>
       </div>
     )

@@ -12,7 +12,7 @@ import {
 const timeline = [
   {
     id: 1,
-    content: 'Start on',
+    content: 'Started on',
     target: 'Web Development',
     date: '2018',
     datetime: '2020-09-20',
@@ -21,7 +21,7 @@ const timeline = [
   },
   {
     id: 2,
-    content: 'Start on ',
+    content: 'Started on ',
     target: 'Mobile Development',
     date: '2019',
     datetime: '2020-09-22',
@@ -39,7 +39,7 @@ const timeline = [
   },
   {
     id: 4,
-    content: 'Graduate with a',
+    content: 'Graduated with a',
     target: 'Computer Science Degree',
     date: '2021',
     datetime: '2020-09-30',

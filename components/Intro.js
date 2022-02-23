@@ -3,7 +3,7 @@ import React from 'react'
 function About(props) {
   const { goAbout } = props
   return (
-    <div className="flex min-h-screen items-center justify-center px-6 md:px-12 xl:px-0">
+    <div className="flex min-h-[90vh] items-center justify-center px-6 md:px-12 xl:px-0">
       <div className="w-full xl:max-w-5xl">
         <div className="w-full sm:flex">
           <div className="w-full">

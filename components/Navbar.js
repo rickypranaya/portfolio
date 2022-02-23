@@ -24,7 +24,7 @@ function Navbar(props) {
           setOpen(false)
           item.go()
         }}
-        className="group flex cursor-pointer items-center py-5 px-6 text-lg md:py-3 md:px-0 md:text-sm"
+        className="group flex cursor-pointer items-center py-5 px-6 text-lg duration-200 hover:translate-y-1 md:py-3 md:px-0 md:text-sm"
       >
         {/* <div className="text-primary">{item.id}.</div> */}
         <item.icon className="h-5 w-5 text-primary" />
@@ -49,7 +49,7 @@ function Navbar(props) {
   ]
 
   return (
-    <div className="navbar fixed top-0 z-50  w-full  ">
+    <div className="navbar  z-50  w-full  ">
       <div className="flex w-full  items-center justify-between bg-dark-darkest bg-opacity-80 py-4 pl-6  pr-4 backdrop-blur md:px-10">
         <Logo />
         <div className="flex items-center space-x-6">

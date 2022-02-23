@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import classNames from 'classnames'
+import useVisible from '../utils/useIsVisible'
 
 const projects = [
   {
@@ -15,7 +16,7 @@ const projects = [
     type: 'Web App',
     name: 'Limedraw.io',
     description:
-      'Combining Zoom + Skribbl.io allowing users to chat, video call and draw in real time. Implementing the use of WebRTC and WebSocket technology with Node.js backend.',
+      'Combining Zoom + Skribbl.io, allowing users to chat, video call and draw in real time. Implementing the use of WebRTC and WebSocket technology with Node.js backend.',
     tech: ['React.js', 'Node.js', 'WebRTC', 'WebSocket'],
     url: 'https://limedraw.netlify.app/',
     preview: 'limedraw/preview.gif',
@@ -40,9 +41,9 @@ const projects = [
     type: 'IOS and Android App',
     name: 'Property App',
     description:
-      "A property IOS and Android app Rentperty for company's client using React Native, ExpressJS and MySQL. Designed features for nearby places using Google Maps API, WebSocket for realtime chat and OCBC PayNow Api.",
+      "A property IOS and Android app Rentperty for the company's client using React Native, ExpressJS and MySQL. Designed features for nearby places using Google Maps API, WebSocket for real time chat and OCBC PayNow Api.",
     tech: ['React Native', 'Express.js', 'MySQL', 'WebSocket'],
-    mobile: 'rentperty/rentperty.mov',
+    mobile: 'rentperty/rentperty.mp4',
   },
   {
     type: 'IOS and Android App',
@@ -164,6 +165,19 @@ const Section = ({ item, align }) => {
 }
 
 function Projects(props) {
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const ref3 = useRef(null)
+  const ref4 = useRef(null)
+  const ref5 = useRef(null)
+  const ref6 = useRef(null)
+  const ref1Visible = useVisible(ref1)
+  const ref2Visible = useVisible(ref2)
+  const ref3Visible = useVisible(ref3)
+  const ref4Visible = useVisible(ref4)
+  const ref5Visible = useVisible(ref5)
+  const ref6Visible = useVisible(ref6)
+
   return (
     <div className="flex h-full items-center justify-center bg-dark-darkest py-32  px-6 md:px-12 xl:px-0">
       <div className="max-w-5xl md:w-[80vw]">
@@ -171,7 +185,50 @@ function Projects(props) {
         <div className="space-y-32">
           {projects.map((item, index) => {
             let align = index % 2 == 0 ? 'right' : 'left'
-            return <Section item={item} key={index} align={align} />
+            let ref
+            let visible
+            switch (index) {
+              case 0:
+                ref = ref1
+                visible = ref1Visible
+                break
+              case 1:
+                ref = ref2
+                visible = ref2Visible
+                break
+              case 2:
+                ref = ref3
+                visible = ref3Visible
+                break
+              case 3:
+                ref = ref4
+                visible = ref4Visible
+                break
+              case 4:
+                ref = ref5
+                visible = ref5Visible
+                break
+              case 5:
+                ref = ref6
+                visible = ref6Visible
+                break
+              default:
+                break
+            }
+            return (
+              <div
+                key={index}
+                ref={ref}
+                className={classNames(
+                  'delay-300 duration-1000',
+                  visible
+                    ? 'translate-y-0 opacity-100'
+                    : 'translate-y-20 opacity-0'
+                )}
+              >
+                <Section item={item} align={align} />
+              </div>
+            )
           })}
         </div>
       </div>

@@ -75,7 +75,7 @@ function About(props) {
             <Header />
 
             <p>
-              It's started 3 years ago when I had these many ideas of apps that
+              It started 3.5 years ago when I had these many ideas of apps that
               could perhaps give an impact on the community. To see those ideas
               coming into creation, with my basic HTML, CSS and vanilla
               javascript knowledge I started to learn my first Mobile
@@ -84,7 +84,7 @@ function About(props) {
             <p>
               Fast-forward to today, I've created quite a handful of softwares
               from Web app and Mobile app to Desktop app and had the privilege
-              to lead a number of projects from Final Year Project to team of
+              to lead a number of projects from Final Year Project to a team of
               developers in a Startup.
             </p>
             <p>
